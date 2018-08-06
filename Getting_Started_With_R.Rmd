@@ -19,7 +19,7 @@ In order to even get started programming, we need to get set up by downloading R
 
 The download links for R are available at [https://cran.r-project.org/mirrors.html](https://cran.r-project.org/mirrors.html), at which you will find links for whatever country you are in. For the US, I have always used the first option for UC Berekely, though there shouldn't be a difference using any of the other options, it just varies where you are downloading from. After clicking on your favorite option, you should be redirected to a page that looks like the one pictures below, at which point you can click on the download link for your operating system of choice.
 
-```{r RSnippet}
+```{r RSnippet, echo = FALSE}
 knitr::include_graphics('figures/RDownloadSnip.PNG')
 ```
 
