@@ -56,7 +56,7 @@ Customizing Your RStudio - Themes
 
 RStudio has a plethora of customization options when it comes to screen color, font, which panes are on what part of the screen, code snippets, etc. Many of these can be found in the "Global Options" portion of the "Tools" tab at the top of the screen.
 
-![](figures/GlobalOptions.png)
+![](figures/Options.png)
 
 For my personal preference, under the Appearance tab on the Global Options Screen, I changed the font to "Courier New", and the Editor Theme to "Cobalt", which for reference makes your RStudio look as such:
 
