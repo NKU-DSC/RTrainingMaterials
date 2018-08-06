@@ -17,19 +17,27 @@ In order to even get started programming, we need to get set up by downloading R
 
 # Downloading R - Windows
 
-The download links for R are available at [https://cran.r-project.org/mirrors.html](https://cran.r-project.org/mirrors.html), at which you will find links for whatever country you are in. For the US, I have always used the first option for UC Berekely, though there shouldn't be a difference using any of the other options, it just varies where you are downloading from. After clicking on your favorite option, you should be redirected to a page that looks like the one pictures below, at which point you can click on the download link for your operating system of choice.
+The download links for R are available at [https://cran.r-project.org/mirrors.html](https://cran.r-project.org/mirrors.html), at which you will find links for whatever country you are in. For the US, I have always used the first option for UC Berekely, though there shouldn't be a difference using any of the other options, it just varies where you are downloading from. After clicking on your favorite option, you should be redirected to a page that looks like the one pictures below, at which point you can click on the download link for Windows
 
 ```{r RSnippet, echo = FALSE}
 knitr::include_graphics('figures/RDownloadSnip.PNG')
 ```
 
-
+From here, just click on the downloaded item, and follow the instructions in the downloader. If there's any options to choose from, the default is normally the safe bet. 
 
 # Downloading R - Mac
 
 Coming Soon!
 
 # Downloading RStudio
+
+So now you have R downloaded, which is great! Techincally you can do everything you need to in just regular R, but luckily for you, that isn't neccessary, since regular R is far from pretty. RStudio was developed in 2011, and is currently led by their Chief Scientist Hadley Wickham, a name you will hear a lot about as you get more and more into R Programming. 
+
+```{r hadley, echo = FALSE, fig.cap = 'The Man, The Myth, The Legend, Hadley Wickham'}
+knitr::include_graphics('figures/hadley.jpg')
+```
+
+To download RStudio, just go to [https://www.rstudio.com/products/rstudio/download/#download](https://www.rstudio.com/products/rstudio/download/#download), click on your operating system, and run the executive. The installer should take it from there! At the end, you should have a nice new RStudio application that you can run, and we can get a bit more comfortable with it now. 
 
 # Getting Familiar With RStudio
 
