@@ -69,8 +69,7 @@ Basic R Programming
 
 Now, we can start to look at actually programming in R!
 
-R As a Calculator
------------------
+### R As a Calculator
 
 Let's begin by looking at the console pane. As stated before, this console can be used to "iteractively" run code, meaning you type it, press enter, and it runs immediately! For example, let's look at a couple of quick calculations we can do:
 
@@ -94,13 +93,14 @@ Let's begin by looking at the console pane. As stated before, this console can b
 
 You can see a more exhaustive list of R operators at <https://www.statmethods.net/management/operators.html>. Also as a note, `#` in any R code denotes a comment, meaning that anything after the pound sign will not be run. This is great for commenting your code so others know what is happening (a practice that does not happen nearly enough), and you will see me use it frequently in this tutorial to denote what lines are doing.
 
-R Scripts
----------
+R File Management
+-----------------
+
+### R Scripts
 
 Naturally, for any longer project, you aren't going to want to write code in the console for every project, you'd much rather have multiple lines of code that can run all at once, more like other more traditional programming languages. R has this built in, in the form of R Scripts. At the top of your screen, click File &gt; New File &gt; R Script to open up a new pane in your R Studio. In this new file, you can type lines of code just as before, but they will be saved after you run them so they can be run again and again. These can be saved just like a Word Document to any folder you want (and Ctrl + S will save your document, so you don't have to click on the Floppy Disk each time). To run a line, just click on the line you'd like to run, and click run at the top of the pane. You'll see that as you do this, that code will be copied down to the console below and run, and the output will appear there as well. You can also use Ctrl + Enter when a line is selected to run that line, or highlight multiple lines with your mouse and use Ctrl + Enter to run them in sequence. This is the primary way to do R Programming for day to day projects, and you can even copy the lines of code displayed in this document and run them in your own scripts as well to check and make sure that they do as you would think.
 
-R Projects
-----------
+### R Projects
 
 Just as you may have various folders on your computer to hold files that all pertain to the same thing, R Projects are a homebase for all of the code, data, and results for any given Project. They are not mandatory, but for clean code and best practices when it comes to File Management, I highly reccomend R Projects. To create your own, click on the top right of your screen where you see "Project: (None)", and then "New Project".
 
@@ -112,8 +112,10 @@ knitr::include_graphics('figures/Projects.png')
 
 You can then Select "New Directory &gt; New Project", name you project (you could make this one "R Training"), and select where you want this Project to be located. Now everything shoiuld look like you just opened RStudio again for the first time, but now any packages you install , variables you create, etc. will stay in this Project, making them easy to keep separate from other things you're working on. I normally create new Projects for every class I'm taking that may use R, and separate projects for any other side work I may be doing. If you create one for this Tutorial, then you can come back and reference all of the code you wrote another time without interrupting any of your other code and creating a very messy environment.
 
-Variable Assignment
--------------------
+R Basics
+--------
+
+### Variable Assignment
 
 This is neat and all, but of course we want to do much more than this in R. You can save the results of a line of code to a variable by using an arrow, such as `<-`, where whatever is happening to the right of arrow will be stored to whatever is on the left. This can be flipped using `->` (though it isn't a great habit to get into), or if you have a background i nother programming languages, you can just use a regular `=` to do the same assignment as `<-`. For example:
 
@@ -145,7 +147,9 @@ myNewVariable * 10 #Now this will throw an error, since myNewVariable no longer 
 
     ## Error in eval(expr, envir, enclos): object 'myNewVariable' not found
 
-Base R Functions
-----------------
+R Data Types
+------------
+
+### Base R Functions
 
 R also comes loaded with some nice functions that we can use, such as getting a square root of a number, truncating a string, .........
