@@ -56,7 +56,7 @@ Customizing Your RStudio - Themes
 
 RStudio has a plethora of customization options when it comes to screen color, font, which panes are on what part of the screen, code snippets, etc. Many of these can be found in the "Global Options" portion of the "Tools" tab at the top of the screen.
 
-![](figures/RDownloadSnip.PNG)
+![](figures/Options.PNG)
 
 ![](figures/Options.png)
 
