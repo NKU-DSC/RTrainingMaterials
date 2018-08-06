@@ -62,7 +62,7 @@ RStudio has a plethora of customization options when it comes to screen color, f
 
 For my personal preference, under the Appearance tab on the Global Options Screen, I changed the font to "Courier New", and the Editor Theme to "Cobalt", which for reference makes your RStudio look as such:
 
-![](figures/Cobalt.png)
+![](figures/Cobalt.PNG)
 
 I think this looks really nice, but play aorund with it and find a combination that you like! You'll see this theme for any snips I include for the rest of the tutorials, but of course this has no bounds on your code or how anything runs.
 
