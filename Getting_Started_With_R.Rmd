@@ -41,4 +41,12 @@ To download RStudio, just go to [https://www.rstudio.com/products/rstudio/downlo
 
 # Getting Familiar With RStudio
 
+Upon opening RStudio, you should see something that looks like this:
+
+```{r rstudio snip. echo = FALSE}
+knitr::include_graphics('figures/RStudioSnip.png')
+```
+
+This screen consists of three parts. The left side of the screen is your console, you can type code in there and hit enter and it will run immediately
+
 # R As a Calculator
