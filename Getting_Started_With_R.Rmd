@@ -144,6 +144,8 @@ myNewVariable * 10 #Now this will throw an error, since myNewVariable no longer 
 
 ## R Data Types
 
-### Base R Functions
 
-R also comes loaded with some nice functions that we can use, such as getting a square root of a number, truncating a string, .........
+
+## Base R Functions
+
+R also comes loaded with some nice functions that we can use, such as getting a square root of a number, truncating a string, 
