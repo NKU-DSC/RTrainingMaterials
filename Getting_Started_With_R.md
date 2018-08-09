@@ -147,9 +147,70 @@ myNewVariable * 10 #Now this will throw an error, since myNewVariable no longer 
 
     ## Error in eval(expr, envir, enclos): object 'myNewVariable' not found
 
-R Data Types
-------------
+R Data Types and Data Structures
+--------------------------------
 
-### Base R Functions
+All variables in R are going to be of some type. The most common of these are numerics and characters, but there are a great number, including logicals, factors, vectors, data frames, matricies, Dates, etc. We will be going over some of the more common of these now.
 
-R also comes loaded with some nice functions that we can use, such as getting a square root of a number, truncating a string, .........
+For all variable types, you can run `class()` on a variable to see what data type vit is, if you are ever confused.
+
+### Numerics
+
+Undoubedtly the most common data type, numerics are anything that is, well, numeric. Unlike many programming languages like Java, R doesn't often nitpick between integers and floats (anything with decimals), though technically you can enforce this if you would like. However, R doesn't enforce the "integer" status on variables if you choose to add a fraction to them, whereas Java would normally round the variable to maintain it as an integer. For example:
+
+``` r
+x <- 4
+class(x)
+```
+
+    ## [1] "numeric"
+
+``` r
+x <- 4.5
+class(x)
+```
+
+    ## [1] "numeric"
+
+``` r
+x <- as.integer(4)
+class(x)
+```
+
+    ## [1] "integer"
+
+``` r
+x + 0.5
+```
+
+    ## [1] 4.5
+
+### Characters
+
+Characters are pretty much anything involving letters
+
+### Logicals
+
+Coming Soon!
+
+### Factors
+
+Coming Soon!
+
+### Vectors
+
+Coming Soon!
+
+### Data Frames
+
+Coming Soon!
+
+Base R Functions
+----------------
+
+R also comes loaded with some nice functions that we can use, such as getting a square root of a number, truncating a string...
+
+Conclusion
+==========
+
+Coming Soon!
