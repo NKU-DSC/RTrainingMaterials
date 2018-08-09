@@ -191,4 +191,4 @@ R also comes loaded with some nice functions that we can use, such as getting a 
 
 # Conclusion
 
-Coming Soon!
+Coming Soon!!
