@@ -1,7 +1,6 @@
 ---
 title: "Getting Started with R"
-author: "Parker Kain"
-date: "August 5, 2018"
+author: "Written by the NKU Data Science Club"
 output: github_document
 ---
 

@@ -1,0 +1,11 @@
+---
+title: "Github with RStudio"
+author: "Written by the NKU Data Science Club"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Coming Soon!

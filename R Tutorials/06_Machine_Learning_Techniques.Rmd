@@ -1,0 +1,11 @@
+---
+title: "Other Machine Learning Techniques"
+author: "NKU Data Science Club"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Coming Soon!
