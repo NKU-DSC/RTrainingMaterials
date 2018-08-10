@@ -20,7 +20,17 @@ To begin, let's get git setup, see what it can do, and then get started with Git
 
 ## Git Installation and Setup
 
+### The Github Desktop Way
 
+### The Command Line Way
+
+#### Windows
+
+If you're on windows, just go to https://git-scm.com/download/win, and the download hould happen automatically. Just click the executable and follow the steps provided!
+
+#### Mac
+
+I haven't tried this, since I don't have mac, but apparentrly you can type `git` on the terminal, and it will prompt you to install git!
 
 ## Github Setup
 
