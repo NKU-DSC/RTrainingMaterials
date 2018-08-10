@@ -16,6 +16,47 @@ To begin, let's get git setup, see what it can do, and then get started with Git
 Git Installation and Setup
 --------------------------
 
+There are two main camps when it comes to using Git and GitHub, and you can think of it a lot like the R versus Python debate (everyone is right but we're all mad anyway).
+
+1.  **Command Line Git/Github**
+    This is the git was orignially made to be used. You can save the version of your code in some command line code, and push them to github online with even more command line code. Though very fast and simple once you climb an initial learning curve, I think this method can be a little more tricky to understand at first for people that are not very familiar with command line.
+
+2.  **Github Desktop**
+    Back in 2015, the people behind Github decided to try to make it even easier to use git, and so they created an application you can download that can handle all of your file management for your without any command line code. This application is called Github Desktop! It gives you a more visual representation of what is going on, and in my opinion is a little more intutitive than traditional git.
+
+When ti comes to picking one or the other, there really is no correct way. If you are not familiar with using the command line much, I would reccomend Github Desktop, though in the long run, it's probably more univerasally applicable for future jobs to have a working knowledge of command line git.
+
+**The Silver Lining**
+Luckily for any future R users out there (that's you!) no matter which one of these you choose, you will not have to interact with git outside of RStudio very often. I'll go over the basics just so establish some base concepts, but then we can see how RStudio can make this all even easier!
+
+### The Github Desktop Way
+
+### The Command Line Way
+
+#### Windows
+
+If you're on windows, just go to <https://git-scm.com/download/win>, and the download hould happen automatically. Just click the executable and follow the steps provided!
+
+#### Mac
+
+I haven't tried this, since I don't have mac, but apparentrly you can type `git` on the terminal, and it will prompt you to install git!
+
+#### First Time Git Configuration
+
+After following through with the installation, you should now have access to the Git CMD application!
+
+``` r
+knitr::include_graphics('figures/GitCMD.png')
+```
+
+![](figures/GitCMD.png)
+
+Open this, and you should now see a command line interface. This is git in it's purest form! On this screen, type the following:
+
+`git config --global user.name "Your Name Here"` `git config --global user.email YourEmail@nku.edu`
+
+Now git knows who you are, so when you publish things it knows who to thank!
+
 Github Setup
 ------------
 
