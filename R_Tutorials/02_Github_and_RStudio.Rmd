@@ -165,3 +165,5 @@ Once your new project is up, you just need to update your folder to contain all 
 ```{r FilesPane}
 knitr::include_graphics('figures/FilesPane.png')
 ```
+
+REST IS COMING SOON
