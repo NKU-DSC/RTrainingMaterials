@@ -9,7 +9,9 @@ Written by the NKU Data Science Club
 -   [Using Git / Github](#using-git-github)
     -   [Creating a Repository](#creating-a-repository)
     -   [Github and RStudio](#github-and-rstudio)
-    -   [Working on the NKU-DSC Repository](#working-on-the-nku-dsc-repository)
+        -   [Creating a Git Enabled RStudio Project](#creating-a-git-enabled-rstudio-project)
+        -   [Working with a Git Enabled RStudio Project](#working-with-a-git-enabled-rstudio-project)
+    -   [Working on the NKU-DSC Repositories](#working-on-the-nku-dsc-repositories)
 
 What is Git/Github?
 -------------------
@@ -93,7 +95,9 @@ Now, let's go over a demo where we create our own repo, write a short R script, 
 Github and RStudio
 ------------------
 
-Before we get going, we have one last little bit of setup to do, and that's connecting our git to RStudio. In RStudio, go to Tools &gt; Global Options &gt; Git/SVN, and there you should see a menu option that says "Git executable". Click browse, and find your git.exe on your computer. If you are on Windows, it should be in a similar file path to what you see in the below screen shot, or on Mac it should be in either `/usr/bin/git`, `/usr/local/bin/git`, or `/usr/local/git/bin/git`. Find yours, and hit OK at the bottom of the menu.
+### Creating a Git Enabled RStudio Project
+
+Before we get going, we have one last little bit of setup to do, and that's connecting our git to RStudio. In RStudio, go to `Tools > Global Options > Git/SVN`, and there you should see a menu option that says "Git executable". Click browse, and find your git.exe on your computer. If you are on Windows, it should be in a similar file path to what you see in the below screen shot, or on Mac it should be in either `/usr/bin/git`, `/usr/local/bin/git`, or `/usr/local/git/bin/git`. Find yours, and hit OK at the bottom of the menu. You will only need to do this part once.
 
 ``` r
 knitr::include_graphics('figures/GitGlobalOption.png')
@@ -101,5 +105,93 @@ knitr::include_graphics('figures/GitGlobalOption.png')
 
 ![](figures/GitGlobalOption.png)
 
-Working on the NKU-DSC Repository
----------------------------------
+Now, we can create a new Project that uses Git! First we want to create a repository that we can host our code in. In a web browser, go to your github profile page (should be <https://github.com/yourAccountName>).
+
+``` r
+knitr::include_graphics('figures/Githubprofile.png')
+```
+
+![](figures/Githubprofile.png)
+
+Your profile should look something like the one above, though mine has a repository already and some sommits I have made.
+
+Once you are here, click on the "Repositories" tab, and then the green button that says "New". The following page will promp you to enter a repository name, a description if you want, and that's it! Feel free to ignore the 'Initialize this repository with a README' option, we'll talk about that later. Also, make sure your repo is Public, Private repositories cost money to create.
+
+``` r
+knitr::include_graphics('figures/createRepo.png')
+```
+
+![](figures/createRepo.png)
+
+Alright! Now we have an empty repo, and it should look something like the below image.
+
+``` r
+knitr::include_graphics('figures/newRepoPage.png')
+```
+
+![](figures/newRepoPage.png)
+
+This screen is giving you directions on how to get hooked up with Github if you were doing things from the command line, but we don't need to worry about that since you've got RStudio! All you need to do is copy that link in the blue "Quick Setup" section, **making sure that the HTTPS version is selected**. Now let's go to Rstudio to finish up!
+
+In the top right of RStudio, click `New Project > Version Control > Git`, and you should be greated by a screen that looks like the one below!
+
+``` r
+knitr::include_graphics('figures/createGitProject.png')
+```
+
+![](figures/createGitProject.png)
+
+Just paste the link you copied into the "Repository URL" box, name the Project anything you want, and you can make it a subdirectory of anything you want (that just means the project will be housed within a given folder on your computer). Hit Create Project and we are good to go!
+
+### Working with a Git Enabled RStudio Project
+
+Alright, you should now be looking at a familiar space, an empty R Project. Feel free to open up an empty script, and type a line or two of code in there. Save this script (I named mine test.R), and make sure you don't change the save location, git will only work for files saved within the RProject folder. Now, in the top right pane, you'll see a new tab, labeled Git! Click on this, and you'll be greeted with a new menu that should look like this:
+
+``` r
+knitr::include_graphics('figures/GitPane.png')
+```
+
+![](figures/GitPane.png)
+
+Essentially, what this means is that anything listed here has been changed in the folder that the RProject is located in. A .gitignore file is created in every git repository, and coincidentally you can mostly ignore it. The other two things we have here are my R Project itself, which doesn't need to be uploaded, and the script we just wrote `test.R`. Let's see if we can get this file onto Github!
+
+Click the check box to the left of test.R, and you'll see the yellow Question mark box has been replaced with a green A. This means you are Adding this file to Github (this will always be done automatically, Github does a good job of keeping track iof you are adding, deleting, modifying, etc.) Now the first thing we want to do with this file is "Commit" it. Commiting is the git equivalent of saving some changes.
+
+Click on the Commit button at the top of the pane, and a enw window should open up!
+
+``` r
+knitr::include_graphics('figures/GitDiff.png')
+```
+
+![](figures/GitDiff.png)
+
+The whole point of this window is so you can review any changes you have made. Notice in that bottom panel, you can see in green the code I have added. Any code I had removed or changed would be red as well. If we are happy with our changes, we can type a quick message describing our change (maybe, "Added some variable assignments") and then press the commit button.
+
+Commiting changes saves them to your local machine, but we want these to go online so the world can see all the great work we've done! This is where Push and Pull come into play. The Push buttons "Pushes" changes you have committed to Github, and Pull brings changes from Github that are not on your machine yet to you. Click on the Green Push button, and after a few seconds, you should be able to close out of this menu.
+
+Now, we can revisit our github repository and see our changes!
+
+``` r
+knitr::include_graphics('figures/PushIsDone.png')
+```
+
+![](figures/PushIsDone.png)
+
+Now our code is here, great! Just repeat this process as you continue to update your scripts, and you'll have a github repository in no time!
+
+Working on the NKU-DSC Repositories
+-----------------------------------
+
+Now you know how to keep a project updated when you are the only person workin on it, but if you would like to contribute to the NKU-DSC training repos, you will need to understand just a bit more! Here, we'll talk through the process of proposing an edit to a tutorial on the Github.
+
+First, you'll want to make an RProject that is git enabled, that is a "clone" of the RTrainingMaterials repo. If you go to <https://github.com/NKU-DSC/RTrainingMaterials>, you should see a green button that says "Clone or Download", and you can copy the link there. From there, just create an R Project as described above, pasting this link in to the repository URL.
+
+Once your new project is up, you just need to update your folder to contain all of the current work that is stored in the repository. This is what a pull is for! Click the blue downwards arrow in your Git Pane, and R will handlke the rest. Now in the bottom right file pane, you should see the file structure of the RTrainingMaterials Github, complete with files you can click on to open!
+
+``` r
+knitr::include_graphics('figures/FilesPane.png')
+```
+
+![](figures/FilesPane.png)
+
+REST IS COMING SOON
