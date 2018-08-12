@@ -1,7 +1,9 @@
 ---
 title: "Getting Started with R"
 author: "Written by the NKU Data Science Club"
-output: github_document
+output: 
+  github_document:
+    toc: true
 ---
 
 ```{r setup, include=FALSE}

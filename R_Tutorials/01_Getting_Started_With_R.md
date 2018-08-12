@@ -2,6 +2,30 @@ Getting Started with R
 ================
 Written by the NKU Data Science Club
 
+-   [Introduction](#introduction)
+-   [Downloading and Installing R](#downloading-and-installing-r)
+    -   [Downloading R - Windows](#downloading-r---windows)
+    -   [Downloading R - Mac](#downloading-r---mac)
+    -   [Downloading RStudio](#downloading-rstudio)
+-   [Getting Familiar With RStudio](#getting-familiar-with-rstudio)
+    -   [Customizing Your RStudio - Themes](#customizing-your-rstudio---themes)
+-   [Basic R Programming](#basic-r-programming)
+    -   [R As a Calculator](#r-as-a-calculator)
+    -   [R File Management](#r-file-management)
+        -   [R Scripts](#r-scripts)
+        -   [R Projects](#r-projects)
+    -   [R Basics](#r-basics)
+        -   [Variable Assignment](#variable-assignment)
+    -   [R Data Types and Data Structures](#r-data-types-and-data-structures)
+        -   [Numerics](#numerics)
+        -   [Characters](#characters)
+        -   [Logicals](#logicals)
+        -   [Factors](#factors)
+        -   [Vectors](#vectors)
+        -   [Data Frames](#data-frames)
+    -   [Base R Functions](#base-r-functions)
+-   [Conclusion](#conclusion)
+
 Introduction
 ============
 
@@ -213,4 +237,4 @@ R also comes loaded with some nice functions that we can use, such as getting a 
 Conclusion
 ==========
 
-Coming Soon!
+Coming Soon!!

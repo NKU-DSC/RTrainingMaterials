@@ -2,6 +2,15 @@ Github with RStudio
 ================
 Written by the NKU Data Science Club
 
+-   [What is Git/Github?](#what-is-gitgithub)
+-   [Git / Github Installation and Setup](#git-github-installation-and-setup)
+    -   [The Github Desktop Way](#the-github-desktop-way)
+    -   [The Command Line Way](#the-command-line-way)
+-   [Using Git / Github](#using-git-github)
+    -   [Creating a Repository](#creating-a-repository)
+    -   [Github and RStudio](#github-and-rstudio)
+    -   [Working on the NKU-DSC Repository](#working-on-the-nku-dsc-repository)
+
 What is Git/Github?
 -------------------
 
@@ -13,8 +22,8 @@ Put simply, git is a great way to manage your code over time, especially one pro
 
 To begin, let's get git setup, see what it can do, and then get started with GitHub.
 
-Git Installation and Setup
---------------------------
+Git / Github Installation and Setup
+-----------------------------------
 
 There are two main camps when it comes to using Git and GitHub, and you can think of it a lot like the R versus Python debate (everyone is right but we're all mad anyway).
 
@@ -31,7 +40,11 @@ Luckily for any future R users out there (that's you!) no matter which one of th
 
 ### The Github Desktop Way
 
+Github Desktop is very easy to set up, it really does all the heavy lifting for you! Visit the link: <https://desktop.github.com/> and click the download link to get going. This will follow you through creating a Github account, establish your name and email, and downloading the actual desktop application, which you will use for any management you want to do. A nice thing to add here is this will set up command line git along the way, so if you ever decide you want to switch, it's no problem at all!
+
 ### The Command Line Way
+
+So you've decided to do things the purist way, nice! Git and Github is not hard to get set up, even on command line, so let's get started!
 
 #### Windows
 
@@ -57,17 +70,36 @@ Open this, and you should now see a command line interface. This is git in it's 
 
 Now git knows who you are, so when you publish things it knows who to thank!
 
-Github Setup
-------------
+#### Github Setup
+
+Coming Soon!
+
+Using Git / Github
+==================
+
+As an administrative note, from this opoint on I'll be talking generally about the concepts that drive git and github, not any code that does it. This is so we can understand the basic mechanics and move into RStudio as quickly as possible. If you are interested in learning more about command line git and its inner workings, yoiu can visit its documentation and guide at <https://git-scm.com/book/en/v2/>.
 
 Creating a Repository
 ---------------------
 
-Commits, Pushes, and Pulls
---------------------------
+Now, let's talk about the core concepts behind Github. The places where you see other people's code, and potentially store your own are called repositories (often called repos). For example, all of these tutorials are hosted on <https://github.com/NKU-DSC/RTrainingMaterials>. NKU-DSC is the account name here, and RTrainingMaterials is the repository the code is housed in. Users can have multiple repositories if they like (we could start PythonTrainingMaterials some day!), and the user that created the repository essentially owns that space. They can grant permissions to change the code in those repositories, keep them private, or handle the administrative side of the repository. Repos are great for separating your work, as then all of the work inside a repository can be related to the same overarching project. For the sake of this tutorial, the key takeaways are:
+
+-   Repositories house code related to an overarching project.
+-   The owner of a repository can change the documents in that repository as they wish, and
+-   Other users can request to push changes to a repositories code base in a process called "Pull Requests", which we'll talk about in just a second.
+
+Now, let's go over a demo where we create our own repo, write a short R script, and host the code on GitHub.
 
 Github and RStudio
 ------------------
+
+Before we get going, we have one last little bit of setup to do, and that's connecting our git to RStudio. In RStudio, go to Tools &gt; Global Options &gt; Git/SVN, and there you should see a menu option that says "Git executable". Click browse, and find your git.exe on your computer. If you are on Windows, it should be in a similar file path to what you see in the below screen shot, or on Mac it should be in either `/usr/bin/git`, `/usr/local/bin/git`, or `/usr/local/git/bin/git`. Find yours, and hit OK at the bottom of the menu.
+
+``` r
+knitr::include_graphics('figures/GitGlobalOption.png')
+```
+
+![](figures/GitGlobalOption.png)
 
 Working on the NKU-DSC Repository
 ---------------------------------
