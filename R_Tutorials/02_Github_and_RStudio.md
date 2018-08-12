@@ -61,10 +61,10 @@ I haven't tried this, since I don't have mac, but apparentrly you can type `git`
 After following through with the installation, you should now have access to the Git CMD application!
 
 ``` r
-knitr::include_graphics('figures/GitCMD.png')
+knitr::include_graphics('figures/GitCMD.PNG')
 ```
 
-![](figures/GitCMD.png)
+![](figures/GitCMD.PNG)
 
 Open this, and you should now see a command line interface. This is git in it's purest form! On this screen, type the following:
 
