@@ -15,6 +15,7 @@ Written by the NKU Data Science Club
         -   [R Scripts](#r-scripts)
         -   [R Projects](#r-projects)
     -   [R Basics](#r-basics)
+        -   [Getting Help in R](#getting-help-in-r)
         -   [Variable Assignment](#variable-assignment)
     -   [R Data Types and Data Structures](#r-data-types-and-data-structures)
         -   [Numerics](#numerics)
@@ -24,6 +25,8 @@ Written by the NKU Data Science Club
         -   [Vectors](#vectors)
         -   [Data Frames](#data-frames)
     -   [Base R Functions](#base-r-functions)
+        -   [If Statements](#if-statements)
+        -   [For Loops](#for-loops)
 -   [Conclusion](#conclusion)
 
 Introduction
@@ -128,15 +131,41 @@ Naturally, for any longer project, you aren't going to want to write code in the
 Just as you may have various folders on your computer to hold files that all pertain to the same thing, R Projects are a homebase for all of the code, data, and results for any given Project. They are not mandatory, but for clean code and best practices when it comes to File Management, I highly reccomend R Projects. To create your own, click on the top right of your screen where you see "Project: (None)", and then "New Project".
 
 ``` r
-knitr::include_graphics('figures/Projects.png')
+knitr::include_graphics('figures/Projects.PNG')
 ```
 
-![](figures/Projects.png)
+![](figures/Projects.PNG)
 
 You can then Select "New Directory &gt; New Project", name you project (you could make this one "R Training"), and select where you want this Project to be located. Now everything shoiuld look like you just opened RStudio again for the first time, but now any packages you install , variables you create, etc. will stay in this Project, making them easy to keep separate from other things you're working on. I normally create new Projects for every class I'm taking that may use R, and separate projects for any other side work I may be doing. If you create one for this Tutorial, then you can come back and reference all of the code you wrote another time without interrupting any of your other code and creating a very messy environment.
 
 R Basics
 --------
+
+### Getting Help in R
+
+As a general rulke of thumb for all programming languages, google is your best friend. If you see in these tutorials any code that doesn't look familiar or you don't understand, feel free to google them, and you can usually find the documentation for that code, or people on Stack Overflow talking about an issue they have. This works especially well with error messages, which are not always super desciptive in helping you find a problem.
+
+#### The Beauty of R Documentation
+
+Another tip is for any function we use (things like `mean()`, `as.character()`, and so many others you'll see described briefly below) you can always type `?functionName` into your R Console, and the documentation will pop up in the bottom right panel. Give this a shot by typing `?mean` in your console, and you can read about what arguments (inputs) the function takes, and an example of this in action.
+
+![](figures/meanDocumentation.PNG)
+
+You can see in this example, mean has three main arguments, x, trim, and na.rm. The code above the 'Arguments' section shows us that by default, trim is set to 0, and na.rm is set to FALSE. This means that these aruments are **optional**, or that you do not have to provide them unless you intend to change those arguments. Let's check out a quick example of this in action:
+
+``` r
+x <- c(1,2,3,4,5, NA) #Think of this as a list of numbers all together
+
+mean(x) #because one of our values is NA (missing), mean will always return NA
+```
+
+    ## [1] NA
+
+``` r
+mean(x, na.rm = T) #However we can change the na.rm argument to ignore the NA, and print the mean of the remaining numbers
+```
+
+    ## [1] 3
 
 ### Variable Assignment
 
@@ -150,7 +179,7 @@ x / y -> z
 
 See that if you run these lines in your own console, the variables x, y, and z will no2 appear in the Environment tab in RStudio as such.
 
-![](figures/VariableAssignment.png)
+![](figures/VariableAssignment.PNG)
 
 This makes it very easy for us to keep track of our variables, and remember what is happening to them. This can be a double edged sword, however, as long projects can create very cluttered environments. If you ever decide to try something out in your code, save it to a variable, and then decide you no longer want this variable, you can use `rm(variableName)` (where variableName is, well, your variable name) and this will be removerd from your environment. Alternatively, you can click the broom icon on the environment pane to remove **all** of your variables, however keep in mind that any code that involves these variables will now not run until you reassign those variable names. For example:
 
@@ -169,6 +198,12 @@ myNewVariable * 10 #Now this will throw an error, since myNewVariable no longer 
 ```
 
     ## Error in eval(expr, envir, enclos): object 'myNewVariable' not found
+
+#### Naming Variables
+
+There are two main camps when it comes to naming variables, those that use camel case and those that use underscores. Camel case means you will capitilize the start of every word after the first one (like myVariable, myOtherVariable, or myThirdVariable). You can also use underscores (like my\_varaible, my\_other\_variable, etc.) however in my opinion this makes variable names too long abd clunky, and I hate moving my hand for the underscore key.
+
+Also, as a general rule, you cannot start variables with a number of special character, and I would avoid using any special characters other than an underscore in your variable names.
 
 R Data Types and Data Structures
 --------------------------------
@@ -211,11 +246,59 @@ class(x) #Now X has gone back to being a numeric!
 
 ### Characters
 
-Characters are pretty much anything involving letters
+Characters are pretty much anything involving letters, and are written in R by using either single or double quotations. There is no difference in R between the two, however a double quoptation `"like this"` is preferred, as if people are coming from other programming languages, a single quotation usually means we are talking about a single character, not a string of characters. There are a lot of handy functions in R for working with these, but we'll discuss them as they come up in other sections!
+
+``` r
+x <- "Hello World!"
+
+y <- 'Hello World!'
+
+x == y #There is no difference between the variables having single or double quotes.
+```
+
+    ## [1] TRUE
+
+``` r
+x <- "Parker says, 'Hello World!'" #However, you can intermix them if you would like to have quotes in your variable!
+
+x
+```
+
+    ## [1] "Parker says, 'Hello World!'"
 
 ### Logicals
 
-Coming Soon!
+If you've taken any programming class before, you probably know everything you need to know about logicals (also called booleans). These are true and false values, and you can do 'ands', 'ors', and 'negations' with them as well. As a note, trues and falses can be written as a single uppercase letter, or as the entire word written out in all caps (like TRUE or FALSE). f Let's look at a few examples:
+
+``` r
+TRUE == T #The double equals sign checks for equivalence.
+```
+
+    ## [1] TRUE
+
+``` r
+FALSE != TRUE #!= check for inequality
+```
+
+    ## [1] TRUE
+
+``` r
+TRUE && FALSE #Two ampersands is an AND in R
+```
+
+    ## [1] FALSE
+
+``` r
+FALSE || TRUE #And two vertical bars is a logical OR
+```
+
+    ## [1] TRUE
+
+``` r
+!(TRUE && FALSE) #Also an exclamation point outside of a logical statement will flip it!
+```
+
+    ## [1] TRUE
 
 ### Factors
 
@@ -233,6 +316,14 @@ Base R Functions
 ----------------
 
 R also comes loaded with some nice functions that we can use, such as getting a square root of a number, truncating a string...
+
+### If Statements
+
+Coming Soon!
+
+### For Loops
+
+Coming Soon!
 
 Conclusion
 ==========
