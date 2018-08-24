@@ -21,8 +21,8 @@ Written by the NKU Data Science Club
         -   [Numerics](#numerics)
         -   [Characters](#characters)
         -   [Logicals](#logicals)
-        -   [Factors](#factors)
         -   [Vectors](#vectors)
+        -   [Factors](#factors)
         -   [Data Frames](#data-frames)
     -   [Base R Functions](#base-r-functions)
         -   [If Statements](#if-statements)
@@ -300,13 +300,39 @@ FALSE || TRUE #And two vertical bars is a logical OR
 
     ## [1] TRUE
 
-### Factors
-
-Coming Soon!
-
 ### Vectors
 
-Coming Soon!
+Vectors are much like arrays in other languages, they are just a collection of variables all of the same type. They can hold any type you want, and do not have a defined length, like they do in many other languages. This means you can remove from them, append to them, and move them around as much as you want! The default one to create one is to have just put all of the values you want in the vector separated by commas in a vector skeleton that looks like `c()`. Let's look at how you can create and work with vectors:
+
+``` r
+myVector <- c(1, 2, 3, 4, 5) #Creating a numeric vector that contains the numbers one through five.
+
+myVector
+```
+
+    ## [1] 1 2 3 4 5
+
+``` r
+myVector2 <- c(1:5) #Using a colon between two numbers specifies a range
+
+myVector2
+```
+
+    ## [1] 1 2 3 4 5
+
+``` r
+myStringVector <- c('Hello', 'I', 'Am', 'Parker')
+
+myStringVector
+```
+
+    ## [1] "Hello"  "I"      "Am"     "Parker"
+
+#### Indexing with Vectors
+
+### Factors
+
+Factors are both nifty once you get the hang of them, but also a little hard to get used to just starting out. They are meant to code categorical variables, or anything where you are selecting from a number of options
 
 ### Data Frames
 
