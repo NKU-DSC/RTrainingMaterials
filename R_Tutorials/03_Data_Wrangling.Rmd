@@ -10,6 +10,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+
 # Introduction
 
 This tutorial is meant to help you take your data, and get it into the form that you want it to be in for analysis. The preprocessing step of the data science pipeline is an oft-forgotten portion that takes up a **LOT** of time (and can potentially be very frustrating). The goal here is to help make those steps less frustrating, and help you get started with data science pipeline!
@@ -30,8 +31,33 @@ knitr::include_graphics('figures/tidyData.PNG')
 
 A classic dataset you will see mentioned frequently in R is the `iris` dataset, which comes preloaded into R, is small and quick to work with, and is great to try out machine learning algorithms. `iris` is a tidy dataset, as it follows the rules defined above. Let's see what it looks like!
 
-```{r iris}
-iris
+```{r iris, echo = FALSE, warning=FALSE}
+library(knitr)
+library(tidyverse)
+
+kable(iris[1:10,])
 ```
 
+Here you can see that each row is describing a singular flower, and each column is giving some detail about that flower, like it's Petal Length, or Sepal Length. Now let's consider a non-tidy dataset, one that does not follow these rules. 
+
+```{r gatherUntidy, warning = FALSE}
+
+untidyIris <- iris %>% 
+                  mutate(Flower_Number = 1:150) %>% 
+                  gather(key = 'Variable', value = 'Value', Sepal.Length, Sepal.Width, Petal.Length, Petal.Width, Species) %>% 
+                  select(Flower_Number, everything()) %>% 
+                  arrange(Flower_Number)
+
+
+```
+
+```{r displayUntidy, echo = FALSE}
+ 
+kable(untidyIris[1:20,])
+
+```
+
+Don't worry too much about the code right now, it's just included to give a show of what your code will look like oince we get up and running with dplyr! You can see our final table however, where now we have a column that contains the name of the variable that we are talking about, and another column that is the value that corresponds to that variable for that flower. This data is much more difficult to work with generally, as now our flowers are harder to isolate and treat as individual units. This structure is not compeltely useless though, especially if we want to visualize all of the variables at once with respect to each other. 
+
 # dplyr
+

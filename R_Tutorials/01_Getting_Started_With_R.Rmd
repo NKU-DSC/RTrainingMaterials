@@ -275,6 +275,13 @@ Coming Soon!
 
 Coming Soon!
 
+## Installing and Using Packages
+
+Coming Soon!
+
+### The Tidyverse
+
+Coming Soon!
 
 # Conclusion
 

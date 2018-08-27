@@ -27,6 +27,8 @@ Written by the NKU Data Science Club
     -   [Base R Functions](#base-r-functions)
         -   [If Statements](#if-statements)
         -   [For Loops](#for-loops)
+    -   [Installing and Using Packages](#installing-and-using-packages)
+        -   [The Tidyverse](#the-tidyverse)
 -   [Conclusion](#conclusion)
 
 Introduction
@@ -348,6 +350,15 @@ R also comes loaded with some nice functions that we can use, such as getting a 
 Coming Soon!
 
 ### For Loops
+
+Coming Soon!
+
+Installing and Using Packages
+-----------------------------
+
+Coming Soon!
+
+### The Tidyverse
 
 Coming Soon!
 
