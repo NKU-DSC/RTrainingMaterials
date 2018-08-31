@@ -10,6 +10,7 @@ Written by the NKU Data Science Club
 -   [Getting Familiar With RStudio](#getting-familiar-with-rstudio)
     -   [Customizing Your RStudio - Themes](#customizing-your-rstudio---themes)
 -   [Basic R Programming](#basic-r-programming)
+    -   [Commenting](#commenting)
     -   [R As a Calculator](#r-as-a-calculator)
     -   [R File Management](#r-file-management)
         -   [R Scripts](#r-scripts)
@@ -104,6 +105,17 @@ Basic R Programming
 ===================
 
 Now, we can start to look at actually programming in R!
+
+### Commenting
+
+Before we start anything, lets talk about commenting your code! It is important to keep your code well documented, so that in the future either yourself or someone else will be able to more clearly understand your code. Commenting in R is always done with a \#. A short cut to comment out a block of code is Contrl+ Shift+C. You can also use dashes after a comment (----) to define sections of your code that you can open and close. You need at least four dashes at the end to create a section.
+
+``` r
+#This is a comment
+
+#Section 1----
+#Section 2----
+```
 
 ### R As a Calculator
 
@@ -364,7 +376,37 @@ Coming Soon!
 Installing and Using Packages
 -----------------------------
 
-Coming Soon!
+There are several ways to install a pacakge in Rstudio. The first way is to go through the package pane on the bottom right. To get started, click the install box pictured below.
+
+![](figures/installpackages1.png)
+
+A new screen will pop up where you can enter the names of the packages you would like to install.
+
+![](figures/installPackages2.png)
+
+The other way to install packages is by using R code. If you choose this option, make sure to put the names of the packages in quotes. You can also install more than one package at a time by seperating them with a comma. The code below is similar to how you would install packages, but you would need to remove the \# at the beginning.
+
+``` r
+#install.packages("tidyverse")
+#install.packages(c("lubridate", "magrittr"))
+```
+
+Once you have your packages installed, you need to library them in. In the library function you do NOT need quotes, but you can use them if you like. You can only library in one function at a time. Another way to attach packages is to use the packages pane in the bottom right corner, but I would not reccommend this method because you might forget which packages you used when you try to re-run your code later.
+
+``` r
+library(tidyverse)
+```
+
+    ## ── Attaching packages ────────────────────────────────────── tidyverse 1.2.1 ──
+
+    ## ✔ ggplot2 3.0.0     ✔ purrr   0.2.5
+    ## ✔ tibble  1.4.2     ✔ dplyr   0.7.6
+    ## ✔ tidyr   0.8.1     ✔ stringr 1.3.1
+    ## ✔ readr   1.1.1     ✔ forcats 0.3.0
+
+    ## ── Conflicts ───────────────────────────────────────── tidyverse_conflicts() ──
+    ## ✖ dplyr::filter() masks stats::filter()
+    ## ✖ dplyr::lag()    masks stats::lag()
 
 ### The Tidyverse
 
