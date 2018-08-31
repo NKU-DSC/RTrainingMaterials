@@ -57,7 +57,7 @@ kable(untidyIris[1:20,])
 
 ```
 
-Don't worry too much about the code right now, it's just included to give a show of what your code will look like oince we get up and running with dplyr! You can see our final table however, where now we have a column that contains the name of the variable that we are talking about, and another column that is the value that corresponds to that variable for that flower. This data is much more difficult to work with generally, as now our flowers are harder to isolate and treat as individual units. This structure is not compeltely useless though, especially if we want to visualize all of the variables at once with respect to each other. 
+Don't worry too much about the code right now, it's just included to give a show of what your code will look like once we get up and running with dplyr! You can see our final table however, where now we have a column that contains the name of the variable that we are talking about, and another column that is the value that corresponds to that variable for that flower. This data is much more difficult to work with generally, as now our flowers are harder to isolate and treat as individual units. This structure is not compeltely useless though, especially if we want to visualize all of the variables at once with respect to each other. So, given that we have a nice dataset that is tidy, we can start using `dplyr` to manage it!
 
 # dplyr
 
