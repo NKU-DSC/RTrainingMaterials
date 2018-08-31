@@ -53,7 +53,15 @@ From here, just click on the downloaded item, and follow the instructions in the
 Downloading R - Mac
 -------------------
 
-Coming Soon!
+The download link for a Mac is the same as Windows, however after that step there are some differences. As stated above you can choose any of the US options. After clicking that link you will be redirected to this page.
+
+![](figures/DownloadForMac1.jpg)
+
+By clicking the Mac option, you will be taken to this page.
+
+![](figures/DownloadForMac3.jpg)
+
+Choose the blue underlined option of R-3.5.1.pkg if you are running El Capitan or higher. The download will start immediately and then you will be prompted to follow a few more steps to install.
 
 Downloading RStudio
 -------------------
@@ -360,7 +368,7 @@ Coming Soon!
 
 ### The Tidyverse
 
-Coming Soon!
+Coming Soon!!
 
 Conclusion
 ==========
